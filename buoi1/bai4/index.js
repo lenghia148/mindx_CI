@@ -61,13 +61,15 @@ searchBnt.addEventListener('click',()=>
                                 personNameSort.push(persons[j].name)
                                 personNameSort.sort();
                                 persons.splice(j,1)
+                                var newPerson = {
+                                    name : personNameSort[0],
+                                    phone: persons[i].phone
+                                }
+                                persons.splice(i,1)
                             }
-                            let newPerson = {
-                                name : personNameSort[0],
-                                phone: persons[i].phone
-                            }
-                            person.push(newPerson)
-                            persons.splice(i,1)
+                           
+                            persons.push(newPerson)
+                           
                    }
             }
 
